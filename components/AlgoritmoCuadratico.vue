@@ -50,7 +50,7 @@
         <input type="number" name="modulo" id="modulo" min="0"
           class="w-24 border border-yellow-200 bg-yellow-100 outline-yellow-500 text-black text-end rounded-md" />
       </div>
-      <button class="w-24 border border-yellow-200 bg-yellow-100 outline-yellow-500 rounded-md self-center">
+      <button type="submit" class="w-24 border border-yellow-200 bg-yellow-100 outline-yellow-500 rounded-md self-center">
         Enviar
       </button>
     </form>
@@ -212,8 +212,6 @@ onMounted(() => {
   coeficienteLinealCheck_17.classList.add("border-yellow-200", "bg-yellow-100");
   moduloCheck.classList.add("border-yellow-200", "bg-yellow-100");
 
-  semillaCheck.autofocus = true;
+  semillaCheck.focus();
 });
 </script>
-
-<style></style>

@@ -125,8 +125,6 @@ onMounted(() => {
   constanteCCheck.classList.add("border-yellow-200", "bg-yellow-100");
   moduloCheck.classList.add("border-yellow-200", "bg-yellow-100");
 
-  semillaCheck.autofocus = true;
+  semillaCheck.focus();
 });
 </script>
-
-<style></style>
