@@ -18,6 +18,12 @@
           </button>
           <button
             class="p-1 border border-yellow-200 bg-yellow-200 hover:bg-yellow-300 rounded-md"
+            @click="setResultado('cuadMed')"
+          >
+            Cuadrados medios
+          </button>
+          <button
+            class="p-1 border border-yellow-200 bg-yellow-200 hover:bg-yellow-300 rounded-md"
             @click="setResultado('varProm')"
           >
             Varianza/Promedio
@@ -28,6 +34,7 @@
         <div v-if="resultado === 'empty'">Seleccione un algoritmo</div>
         <AlgoritmoLineal v-else-if="resultado === 'algoL'" />
         <AlgoritmoCuadratico v-else-if="resultado === 'algoC'" />
+        <CuadradosMedios v-else-if="resultado === 'cuadMed'" />
         <VarianzaPromedio v-else-if="resultado === 'varProm'" />
       </section>
     </MainSlot>

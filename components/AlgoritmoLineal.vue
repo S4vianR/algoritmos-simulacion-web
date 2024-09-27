@@ -90,9 +90,13 @@ const formSubmit = (e: any) => {
     let res = 0;
     let numPseudo = 0;
     mensajeAux.value += 'Iteraciones y pseudoaleatorios'
+    mensajeAux.value += `\nSemilla: ${semilla.value}`;
     while (i <= 150 && semilla.value != 0) {
       res = (constante.value * semilla.value + constanteC.value) % modulo.value;
-      numPseudo = res / modulo.value;
+      // numPseudo = res / modulo.value;
+
+      // Redondear a 6 decimales
+      numPseudo = Math.round((res / modulo.value) * 1000000) / 1000000;
       mensajeAux.value += `\nIteracion no.${i}: ${res}, Pseudoaleatorio: ${numPseudo}`;
       i += 1;
       semilla.value = res;
