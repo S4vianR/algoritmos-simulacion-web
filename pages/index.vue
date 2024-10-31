@@ -28,6 +28,12 @@
           >
             Varianza/Promedio
           </button>
+          <button
+            class="p-1 border border-yellow-200 bg-yellow-200 hover:bg-yellow-300 rounded-md"
+            @click="setResultado('estudioTiempos')"
+          >
+            Estudio de tiempos
+          </button>
         </div>
       </section>
       <section class="flex flex-col gap-1 justify-start items-center">
@@ -36,6 +42,7 @@
         <AlgoritmoCuadratico v-else-if="resultado === 'algoC'" />
         <CuadradosMedios v-else-if="resultado === 'cuadMed'" />
         <VarianzaPromedio v-else-if="resultado === 'varProm'" />
+        <EstudioTiempos v-else-if="resultado === 'estudioTiempos'" />
       </section>
     </MainSlot>
   </div>

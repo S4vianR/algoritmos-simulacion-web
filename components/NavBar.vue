@@ -11,7 +11,7 @@
           </li>
         </ol>
       </nav>
-    </Header>
+    </header>
   </div>
 </template>
 
